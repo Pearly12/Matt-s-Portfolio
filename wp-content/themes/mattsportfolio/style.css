@@ -1,0 +1,107 @@
+/* 
+    Theme Name: Matt's Portfolio
+    Author: Matt Furlong
+    Version: 1.0
+*/
+
+/* Colour Changes */
+
+body {
+  background-color: #f6f6f2;
+}
+
+.site-title {
+  color: #388087;
+  font-size: 6em;
+}
+
+.button {
+  background-color: #e09b41;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.contact-section {
+  background-color: #388087;
+  color: white;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  margin-top: 2%;
+}
+
+#contact > div > form > label {
+  color: #f6f6f2;
+  font-size: 16px;
+}
+
+#contact > input {
+  background-color: #f6f6f2;
+}
+
+.card-stylings {
+  background-color: #f6f6f2;
+}
+
+.card-divider {
+  background-color: #c2ecdc;
+}
+
+/* Small only  */
+@media screen and (max-width: 63.9375em) {
+  .small-12 {
+    margin: 1em 0 1em 0;
+    padding: 0 2em 0 2em;
+  }
+  /* menu items  */
+  body > div.site-head > div.row.menu-centered > ul > li {
+    font-size: 2.5em;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .card-divider {
+    font-size: 2.5em;
+  }
+
+  .card-section > h4 > a {
+    font-size: 2.5rem;
+  }
+
+  .card-section > p,
+  .card-section > ul,
+  #contact > div > p,
+  #contact > div > form > label,
+  .button {
+    font-size: 2rem;
+  }
+
+  .card-section {
+    padding: 2rem;
+  }
+
+  #contact > div {
+    text-align: center;
+  }
+
+  #contact > div > h3 {
+    font-size: 4rem;
+  }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+}
