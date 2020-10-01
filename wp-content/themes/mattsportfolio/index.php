@@ -7,7 +7,6 @@
   <div class="site-head">
     <div class="row">
         <h1 style="margin-top: 20px;" class="text-center site-title">Matthew Furlong</h1>
-
     </div>
     <div class="row menu-centered">
         <ul class="menu ">
@@ -18,6 +17,28 @@
     </div>
 </div>
 <hr/>
+      <?php 
+        $fullUrl = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        // does 'mailsend' exist within the URL?
+        if(strpos($fullUrl, "mailsend") == true) {
+          echo "<div class='row'>
+                  <div style='text-align: center;' class='callout success' data-closable> 
+                    <p>Thank you for contacting me. I will be in touch soon :)</p> 
+                    <button class='close-button' aria-label='Dismiss' type='button' data-close> 
+                    <span aria-hidden='true'>&times;</span></button>
+                  </div>
+                </div>";
+        } else if(strpos($fullUrl, "didnotsend") == true) {
+          echo "<div class='row'>
+                  <div class='callout alert' data-closable> 
+                    <p>The email did not send. Please try again.</p> 
+                    <button class='close-button' aria-label='Dismiss' type='button' data-close> 
+                    <span aria-hidden='true'>&times;</span></button>
+                  </div>
+                </div>";
+        }
+      ?>
+    </div>
     <div class="row projects">
         <?php 
           $projects = new WP_Query(array(

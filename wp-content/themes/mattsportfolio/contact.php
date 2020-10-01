@@ -1,5 +1,5 @@
 <?php
-        $message_sent = false;
+        // $message_sent = false;
 
         if(isset($_POST['submitEmail']) && $_POST['email'] != '') {
             if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
@@ -19,9 +19,9 @@
                   mail($mailTo, $subject, $body, $headers);
                   header("Location: index.php?mailsend");
 
-                  $message_sent = true;
+                //   $message_sent = true;
+
+            } else {
+                header("Location: index.php?didnotsend"); 
             }
-            // else{
-            // //   ?> <p>FAILED</p> <?php
-            // }
         } 
